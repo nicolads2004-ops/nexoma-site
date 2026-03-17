@@ -1,420 +1,314 @@
 <template>
   <div>
-    <!-- HERO -->
-    <section class="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
-      <!-- Subtle background -->
-      <div class="absolute inset-0 bg-grid" />
-      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[600px] bg-emerald-50 rounded-full blur-[120px] opacity-60" />
 
-      <div class="relative max-w-6xl mx-auto px-6">
-        <div class="max-w-3xl mx-auto text-center">
-          <!-- Badge -->
-          <div class="animate-fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-100 mb-8">
-            <span class="w-2 h-2 bg-emerald-500 rounded-full animate-pulse" />
-            <span class="text-sm font-medium text-emerald-700">Agence IA — Poitiers &amp; Vienne (86)</span>
+    <!-- ██ HERO ██ -->
+    <section class="relative min-h-screen flex items-center overflow-hidden">
+      <!-- BG -->
+      <div class="absolute inset-0">
+        <div class="absolute inset-0 bg-gradient-to-br from-[#0a0a0f] via-[#0a1a15] to-[#0a0a0f]" />
+        <div class="absolute top-[-20%] right-[-10%] w-[600px] h-[600px] rounded-full bg-emerald-500/[0.07] blur-[120px]" />
+        <div class="absolute bottom-[-10%] left-[-5%] w-[400px] h-[400px] rounded-full bg-emerald-600/[0.05] blur-[100px]" />
+      </div>
+
+      <div class="relative z-10 max-w-6xl mx-auto px-5 pt-24 pb-16 md:pt-32 md:pb-24">
+        <div class="max-w-3xl">
+          <!-- Social proof mini -->
+          <div class="fade-up d1 flex items-center gap-3 mb-8">
+            <div class="flex -space-x-2">
+              <div v-for="n in 4" :key="n" class="w-8 h-8 rounded-full border-2 border-[#0a0a0f] bg-gradient-to-br from-emerald-400 to-emerald-600 flex items-center justify-center text-[10px] font-bold">
+                {{ ['JD', 'ML', 'PA', 'SC'][n-1] }}
+              </div>
+            </div>
+            <span class="text-sm text-gray-400">Déjà adopté par des PME de la Vienne</span>
           </div>
 
-          <!-- Title -->
-          <h1 class="animate-fade-up delay-1 text-5xl md:text-6xl lg:text-[68px] font-extrabold tracking-tight leading-[1.05] mb-6">
-            Automatisez votre business avec des
-            <span class="text-gradient">agents IA</span>
+          <!-- Headline -->
+          <h1 class="fade-up d2 text-[40px] md:text-[56px] lg:text-[64px] font-extrabold leading-[1.05] tracking-tight mb-6">
+            Une équipe IA complète<br>
+            <span class="text-emerald-400">pour le prix d'un freelance</span>
           </h1>
 
-          <!-- Subtitle -->
-          <p class="animate-fade-up delay-2 text-lg md:text-xl text-gray-500 max-w-2xl mx-auto leading-relaxed mb-10">
-            Nexoma crée des agents IA sur-mesure pour les PME. Devis, relances, prospection, support — on automatise ce qui vous ralentit.
+          <!-- Subhead -->
+          <p class="fade-up d3 text-lg md:text-xl text-gray-400 leading-relaxed max-w-xl mb-4">
+            Vos devis partent en retard. Vos relances tombent à l'eau. Vos clients attendent.<br class="hidden md:block">
+            <strong class="text-white">On installe des agents IA qui font tout ça à votre place, 24h/24.</strong>
           </p>
 
-          <!-- CTAs -->
-          <div class="animate-fade-up delay-3 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#contact" class="btn-primary text-base px-8 py-4">
-              Réserver un appel gratuit
-              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-            </a>
-            <a href="#resultats" class="btn-secondary text-base px-8 py-4">
-              Voir les résultats
+          <p class="fade-up d3 text-base text-gray-500 mb-8">
+            Audit gratuit → On analyse votre business → On vous montre exactement ce qu'on peut automatiser et combien ça vous fait gagner.
+          </p>
+
+          <!-- CTA -->
+          <div class="fade-up d4 flex flex-col sm:flex-row gap-4">
+            <a href="#rdv" class="btn-main text-lg">
+              Demander mon audit gratuit
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
             </a>
           </div>
 
-          <!-- Trust -->
-          <div class="animate-fade-up delay-4 mt-12 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-gray-400">
-            <div class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              Sans engagement
-            </div>
-            <div class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              ROI visible en 30 jours
-            </div>
-            <div class="flex items-center gap-2">
-              <svg class="w-5 h-5 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              Accompagnement local
-            </div>
+          <!-- Micro proof -->
+          <div class="fade-up d4 mt-8 flex flex-wrap gap-6 text-sm text-gray-500">
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Gratuit, sans engagement
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              Résultats en 30 jours
+            </span>
+            <span class="flex items-center gap-1.5">
+              <svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              On se déplace chez vous
+            </span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- STATS BAR -->
-    <section class="py-6 bg-gray-900">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-          <div v-for="stat in stats" :key="stat.label">
-            <div class="text-2xl md:text-3xl font-extrabold text-white">{{ stat.value }}</div>
-            <div class="text-xs md:text-sm text-gray-400 mt-1">{{ stat.label }}</div>
-          </div>
-        </div>
-      </div>
-    </section>
 
-    <!-- SERVICES -->
-    <section id="services" class="py-20 md:py-28">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center">
-          <span class="section-label">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            Services
-          </span>
-          <h2 class="section-title">Ce qu'on automatise <span class="text-gradient">pour vous</span></h2>
-          <p class="section-subtitle">Chaque agent est conçu sur-mesure pour votre métier et vos outils existants.</p>
-        </div>
-
+    <!-- ██ PROBLÈME ██ -->
+    <section class="py-20 md:py-28 relative">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0f] via-[#0f0f18] to-[#0a0a0f]" />
+      <div class="relative max-w-4xl mx-auto px-5 text-center">
+        <p class="text-emerald-400 text-sm font-bold uppercase tracking-widest mb-4">Le problème</p>
+        <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight mb-12">
+          Vous perdez du temps (et de l'argent) chaque jour sur des tâches qu'une IA peut faire mieux que vous.
+        </h2>
         <div class="grid md:grid-cols-3 gap-5">
-          <div v-for="service in services" :key="service.title" class="card p-7 group">
-            <div class="w-12 h-12 rounded-xl flex items-center justify-center mb-5 transition-transform group-hover:scale-110" :class="service.iconBg">
-              <div v-html="service.icon" />
-            </div>
-            <h3 class="text-lg font-bold mb-2 text-gray-900">{{ service.title }}</h3>
-            <p class="text-sm text-gray-500 leading-relaxed">{{ service.desc }}</p>
-          </div>
-        </div>
-
-        <!-- Tools -->
-        <div class="mt-14 text-center">
-          <p class="text-xs font-bold uppercase tracking-[0.15em] text-gray-400 mb-5">Compatible avec vos outils</p>
-          <div class="flex flex-wrap justify-center gap-3">
-            <span v-for="tool in tools" :key="tool" class="px-4 py-2 rounded-lg bg-gray-50 border border-gray-100 text-sm text-gray-500 font-medium">{{ tool }}</span>
+          <div v-for="pain in pains" :key="pain.title" class="glass p-6 text-left">
+            <span class="text-2xl mb-3 block">{{ pain.emoji }}</span>
+            <h3 class="font-bold text-white mb-2">{{ pain.title }}</h3>
+            <p class="text-sm text-gray-400 leading-relaxed">{{ pain.desc }}</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- RESULTATS -->
-    <section id="resultats" class="py-20 md:py-28 bg-gray-50">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center">
-          <span class="section-label">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            Résultats
-          </span>
-          <h2 class="section-title">Des résultats <span class="text-gradient">concrets</span></h2>
-          <p class="section-subtitle">Ce qu'on fait pour les PME de la Vienne, par secteur.</p>
+
+    <!-- ██ SOLUTION ██ -->
+    <section class="py-20 md:py-28 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-emerald-950/40 via-[#0a0a0f] to-[#0a0a0f]" />
+      <div class="absolute top-0 left-0 w-[500px] h-[500px] bg-emerald-500/[0.04] rounded-full blur-[100px]" />
+
+      <div class="relative max-w-5xl mx-auto px-5">
+        <div class="text-center mb-14">
+          <p class="text-emerald-400 text-sm font-bold uppercase tracking-widest mb-4">La solution</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-5">
+            On installe une équipe IA<br>dans votre entreprise
+          </h2>
+          <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+            Pas un outil de plus. Pas un chatbot gadget. Des agents intelligents qui exécutent vos tâches, connectés à vos outils, avec des résultats mesurables.
+          </p>
         </div>
 
         <div class="grid md:grid-cols-2 gap-5">
-          <div v-for="(uc, i) in useCases" :key="i" class="card p-7">
+          <div v-for="s in solutions" :key="s.title" class="glass p-7 group hover:border-emerald-500/20 transition-all duration-300 hover:-translate-y-1">
             <div class="flex items-center gap-4 mb-4">
-              <span class="text-3xl">{{ uc.icon }}</span>
-              <div>
-                <h3 class="font-bold text-gray-900">{{ uc.title }}</h3>
-                <span class="text-xs text-gray-400">{{ uc.sector }}</span>
+              <div class="w-11 h-11 rounded-xl bg-emerald-500/10 flex items-center justify-center shrink-0">
+                <span class="text-emerald-400 text-lg">{{ s.icon }}</span>
               </div>
+              <h3 class="font-bold text-white text-lg">{{ s.title }}</h3>
             </div>
-            <p class="text-sm text-gray-500 leading-relaxed mb-5">{{ uc.description }}</p>
-            <div class="pt-4 border-t border-gray-100 flex items-center gap-2">
-              <svg class="w-5 h-5 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-              <span class="text-sm font-semibold text-emerald-700">{{ uc.result }}</span>
+            <p class="text-sm text-gray-400 leading-relaxed mb-4">{{ s.desc }}</p>
+            <div class="flex items-center gap-2 text-sm font-semibold text-emerald-400">
+              <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
+              {{ s.result }}
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- PROCESS -->
-    <section id="process" class="py-20 md:py-28">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="text-center">
-          <span class="section-label">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            Process
-          </span>
-          <h2 class="section-title">4 étapes, <span class="text-gradient">c'est tout</span></h2>
-          <p class="section-subtitle">De l'appel découverte à l'agent en production.</p>
+
+    <!-- ██ COMMENT ÇA MARCHE ██ -->
+    <section class="py-20 md:py-28">
+      <div class="max-w-4xl mx-auto px-5">
+        <div class="text-center mb-14">
+          <p class="text-emerald-400 text-sm font-bold uppercase tracking-widest mb-4">Comment ça marche</p>
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+            3 étapes. C'est tout.
+          </h2>
         </div>
 
-        <div class="grid md:grid-cols-4 gap-6">
-          <div v-for="(step, i) in steps" :key="i" class="relative">
-            <!-- Connector line -->
-            <div v-if="i < 3" class="hidden md:block absolute top-10 left-[calc(50%+32px)] right-[-calc(50%-32px)] w-[calc(100%-64px)] h-px bg-gray-200 translate-x-[32px]" />
-            <div class="card p-7 text-center h-full">
-              <div class="w-14 h-14 rounded-2xl bg-emerald-50 border border-emerald-100 flex items-center justify-center mx-auto mb-5">
-                <span class="text-xl font-extrabold text-emerald-600">{{ i + 1 }}</span>
-              </div>
-              <h3 class="font-bold text-gray-900 mb-2">{{ step.title }}</h3>
-              <p class="text-sm text-gray-500 leading-relaxed">{{ step.desc }}</p>
+        <div class="space-y-6">
+          <div v-for="(step, i) in steps" :key="i" class="glass p-7 flex gap-6 items-start">
+            <div class="w-12 h-12 rounded-xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center shrink-0">
+              <span class="text-emerald-400 font-extrabold text-lg">{{ i + 1 }}</span>
+            </div>
+            <div>
+              <h3 class="font-bold text-white text-lg mb-1">{{ step.title }}</h3>
+              <p class="text-gray-400 text-sm leading-relaxed">{{ step.desc }}</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- AVANTAGES -->
-    <section class="py-20 md:py-28 bg-gray-900 text-white">
-      <div class="max-w-6xl mx-auto px-6">
-        <div class="grid md:grid-cols-2 gap-14 items-center">
-          <div>
-            <span class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-[0.15em] text-emerald-400 mb-4">
-              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400" />
-              Pourquoi Nexoma
-            </span>
-            <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 leading-[1.1]">
-              Pas une agence web.<br>
-              <span class="text-emerald-400">Une agence IA.</span>
-            </h2>
-            <p class="text-gray-400 text-lg leading-relaxed mb-8">
-              On ne fait pas de sites vitrines. On crée des agents intelligents qui travaillent pour vous, 24h/24, 7j/7. La différence ? Vous voyez le ROI dès le premier mois.
-            </p>
-            <div class="space-y-4">
-              <div v-for="adv in advantages" :key="adv" class="flex items-start gap-3">
-                <div class="w-6 h-6 rounded-lg bg-emerald-500/10 flex items-center justify-center shrink-0 mt-0.5">
-                  <svg class="w-4 h-4 text-emerald-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd" /></svg>
-                </div>
-                <span class="text-gray-300 font-medium">{{ adv }}</span>
-              </div>
-            </div>
+
+    <!-- ██ CHIFFRES ██ -->
+    <section class="py-16 relative">
+      <div class="absolute inset-0 bg-gradient-to-r from-emerald-600 to-emerald-500" />
+      <div class="relative max-w-5xl mx-auto px-5">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+          <div v-for="stat in stats" :key="stat.label">
+            <div class="text-3xl md:text-4xl font-extrabold text-white">{{ stat.value }}</div>
+            <div class="text-sm text-emerald-100 mt-1">{{ stat.label }}</div>
           </div>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center">
-              <div class="text-3xl font-extrabold text-white mb-1">10h+</div>
-              <div class="text-xs text-gray-400">gagnées par semaine</div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ██ POUR QUI ██ -->
+    <section class="py-20 md:py-28">
+      <div class="max-w-5xl mx-auto px-5">
+        <div class="text-center mb-14">
+          <p class="text-emerald-400 text-sm font-bold uppercase tracking-widest mb-4">Pour qui</p>
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+            Ça marche pour votre secteur ?<br>
+            <span class="text-emerald-400">Oui.</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-5">
+          <div v-for="uc in useCases" :key="uc.title" class="glass p-7">
+            <div class="flex items-center gap-3 mb-4">
+              <span class="text-2xl">{{ uc.icon }}</span>
+              <h3 class="font-bold text-white">{{ uc.title }}</h3>
             </div>
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center">
-              <div class="text-3xl font-extrabold text-white mb-1">24/7</div>
-              <div class="text-xs text-gray-400">agents toujours actifs</div>
-            </div>
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center">
-              <div class="text-3xl font-extrabold text-white mb-1">30j</div>
-              <div class="text-xs text-gray-400">pour voir le ROI</div>
-            </div>
-            <div class="bg-white/5 border border-white/10 rounded-2xl p-6 text-center">
-              <div class="text-3xl font-extrabold text-white mb-1">0€</div>
-              <div class="text-xs text-gray-400">si pas de résultat</div>
+            <p class="text-sm text-gray-400 leading-relaxed mb-4">{{ uc.desc }}</p>
+            <div class="pt-4 border-t border-white/5 text-sm font-semibold text-emerald-400">
+              → {{ uc.result }}
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- FAQ -->
-    <section id="faq" class="py-20 md:py-28">
-      <div class="max-w-3xl mx-auto px-6">
-        <div class="text-center">
-          <span class="section-label">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            FAQ
-          </span>
-          <h2 class="section-title">Questions <span class="text-gradient">fréquentes</span></h2>
-          <p class="section-subtitle">Tout ce qu'il faut savoir avant de démarrer.</p>
-        </div>
 
+    <!-- ██ FAQ ██ -->
+    <section class="py-20 md:py-28 relative">
+      <div class="absolute inset-0 bg-gradient-to-b from-[#0a0a0f] via-[#0f0f18] to-[#0a0a0f]" />
+      <div class="relative max-w-3xl mx-auto px-5">
+        <div class="text-center mb-14">
+          <p class="text-emerald-400 text-sm font-bold uppercase tracking-widest mb-4">FAQ</p>
+          <h2 class="text-3xl md:text-4xl font-extrabold tracking-tight">
+            Vos questions, nos réponses.
+          </h2>
+        </div>
         <div class="space-y-3">
-          <div v-for="(item, i) in faq" :key="i"
-            class="card overflow-hidden cursor-pointer"
-            @click="openFaq === i ? openFaq = -1 : openFaq = i">
+          <div v-for="(item, i) in faq" :key="i" class="glass overflow-hidden cursor-pointer" @click="openFaq === i ? openFaq = -1 : openFaq = i">
             <div class="px-6 py-5 flex items-center justify-between gap-4">
-              <h3 class="font-semibold text-gray-900">{{ item.q }}</h3>
-              <div class="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 transition-all duration-200"
-                :class="openFaq === i ? 'bg-emerald-50 rotate-180' : 'bg-gray-50'">
-                <svg class="w-4 h-4" :class="openFaq === i ? 'text-emerald-600' : 'text-gray-400'" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
-              </div>
+              <h3 class="font-semibold text-white">{{ item.q }}</h3>
+              <svg class="w-5 h-5 text-gray-500 shrink-0 transition-transform duration-200" :class="openFaq === i ? 'rotate-180 text-emerald-400' : ''" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" /></svg>
             </div>
-            <Transition enter-active-class="transition-all duration-200 ease-out" enter-from-class="max-h-0 opacity-0" enter-to-class="max-h-96 opacity-100" leave-active-class="transition-all duration-150" leave-from-class="max-h-96 opacity-100" leave-to-class="max-h-0 opacity-0">
-              <div v-show="openFaq === i" class="px-6 pb-5">
-                <div class="h-px bg-gray-100 mb-4" />
-                <p class="text-sm text-gray-500 leading-relaxed">{{ item.a }}</p>
-              </div>
-            </Transition>
+            <div v-show="openFaq === i" class="px-6 pb-5">
+              <div class="h-px bg-white/5 mb-4" />
+              <p class="text-sm text-gray-400 leading-relaxed">{{ item.a }}</p>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="py-20 md:py-28 bg-emerald-600 relative overflow-hidden">
-      <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-0 right-0 w-96 h-96 bg-white rounded-full blur-[100px]" />
-        <div class="absolute bottom-0 left-0 w-64 h-64 bg-emerald-300 rounded-full blur-[80px]" />
-      </div>
-      <div class="relative max-w-3xl mx-auto px-6 text-center">
-        <h2 class="text-3xl md:text-5xl font-extrabold text-white tracking-tight mb-6 leading-tight">
-          Prêt à automatiser ce qui vous ralentit ?
-        </h2>
-        <p class="text-lg text-emerald-100 mb-10 max-w-xl mx-auto">
-          30 minutes. Gratuit. On identifie ensemble les tâches que l'IA peut gérer pour vous.
-        </p>
-        <a href="#contact" class="inline-flex items-center gap-2 px-8 py-4 bg-white text-emerald-700 font-bold rounded-xl text-lg hover:bg-emerald-50 transition-all duration-200 hover:shadow-xl hover:-translate-y-0.5">
-          Réserver mon appel gratuit
-          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
-        </a>
-      </div>
-    </section>
 
-    <!-- CONTACT -->
-    <section id="contact" class="py-20 md:py-28">
-      <div class="max-w-2xl mx-auto px-6">
+    <!-- ██ CTA + CALENDLY ██ -->
+    <section id="rdv" class="py-20 md:py-28 relative overflow-hidden">
+      <div class="absolute inset-0 bg-gradient-to-br from-emerald-950/50 via-[#0a0a0f] to-[#0a0a0f]" />
+      <div class="absolute top-0 right-0 w-[500px] h-[500px] bg-emerald-500/[0.06] rounded-full blur-[120px]" />
+
+      <div class="relative max-w-4xl mx-auto px-5">
         <div class="text-center mb-10">
-          <span class="section-label">
-            <span class="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-            Contact
-          </span>
-          <h2 class="section-title">Parlons de <span class="text-gradient">votre projet</span></h2>
-          <p class="text-gray-500 mt-3">On vous recontacte sous 24h.</p>
+          <h2 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-5">
+            Réservez votre audit gratuit
+          </h2>
+          <p class="text-gray-400 text-lg max-w-xl mx-auto">
+            30 minutes. On analyse votre business et on vous montre exactement ce qu'on peut automatiser. Sans engagement.
+          </p>
         </div>
 
-        <div class="card p-8 md:p-10">
-          <form class="space-y-5" @submit.prevent="submitForm">
-            <div class="grid md:grid-cols-2 gap-4">
-              <div>
-                <label class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Nom</label>
-                <input v-model="form.name" type="text" placeholder="Jean Dupont" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/10 focus:outline-none text-gray-900 placeholder-gray-400 transition text-sm" />
-              </div>
-              <div>
-                <label class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Entreprise</label>
-                <input v-model="form.company" type="text" placeholder="Mon entreprise" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/10 focus:outline-none text-gray-900 placeholder-gray-400 transition text-sm" />
-              </div>
-            </div>
-            <div class="grid md:grid-cols-2 gap-4">
-              <div>
-                <label class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Email</label>
-                <input v-model="form.email" type="email" placeholder="jean@entreprise.fr" required class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/10 focus:outline-none text-gray-900 placeholder-gray-400 transition text-sm" />
-              </div>
-              <div>
-                <label class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Téléphone</label>
-                <input v-model="form.phone" type="tel" placeholder="06 XX XX XX XX" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/10 focus:outline-none text-gray-900 placeholder-gray-400 transition text-sm" />
-              </div>
-            </div>
-            <div>
-              <label class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Secteur</label>
-              <select v-model="form.sector" class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:border-emerald-500 focus:outline-none text-gray-900 transition text-sm appearance-none">
-                <option value="" disabled>Choisir votre secteur</option>
-                <option value="btp">BTP / Artisanat</option>
-                <option value="commerce">Commerce / Retail</option>
-                <option value="liberal">Profession libérale</option>
-                <option value="hotellerie">Hôtellerie / Restauration</option>
-                <option value="services">Services aux entreprises</option>
-                <option value="autre">Autre</option>
-              </select>
-            </div>
-            <div>
-              <label class="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 block">Message</label>
-              <textarea v-model="form.message" rows="4" placeholder="Décrivez brièvement votre besoin..." class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl focus:border-emerald-500 focus:ring-2 focus:ring-emerald-500/10 focus:outline-none text-gray-900 placeholder-gray-400 resize-none transition text-sm" />
-            </div>
-            <button type="submit" class="btn-primary w-full text-base py-4" :class="submitted ? 'bg-emerald-700' : ''" :disabled="submitted">
-              {{ submitted ? 'Message envoyé !' : 'Envoyer ma demande' }}
-            </button>
-          </form>
+        <!-- Calendly -->
+        <div class="glass p-2 md:p-4">
+          <div
+            class="calendly-inline-widget"
+            data-url="https://calendly.com/nico-lads-nexoma/appel-decouverte"
+            style="min-width: 280px; height: 650px;"
+          />
         </div>
       </div>
     </section>
 
-    <!-- SEO LOCAL -->
-    <section class="py-10 border-t border-gray-100">
-      <div class="max-w-4xl mx-auto px-6 text-center">
-        <p class="text-xs text-gray-400 leading-relaxed">
-          Nexoma accompagne les PME de Poitiers, Chasseneuil-du-Poitou, Buxerolles, Mignaloux-Beauvoir, Saint-Benoît, Biard, Ligugé, Fontaine-le-Comte, Montamisé, Jaunay-Marigny, Neuville-de-Poitou, Vivonne, Lusignan, Chauvigny, Loudun et toute la Vienne (86) dans leur transformation digitale grâce à l'intelligence artificielle.
+
+    <!-- ██ SEO LOCAL ██ -->
+    <section class="py-8 border-t border-white/5">
+      <div class="max-w-4xl mx-auto px-5 text-center">
+        <p class="text-[11px] text-gray-700 leading-relaxed">
+          Nexoma accompagne les PME de Poitiers, Chasseneuil-du-Poitou, Buxerolles, Mignaloux-Beauvoir, Saint-Benoît, Biard, Ligugé, Fontaine-le-Comte, Montamisé, Jaunay-Marigny, Neuville-de-Poitou, Vivonne, Lusignan, Chauvigny, Loudun et toute la Vienne (86) dans l'automatisation de leurs processus grâce à l'intelligence artificielle.
         </p>
       </div>
     </section>
+
   </div>
 </template>
 
 <script setup>
 const openFaq = ref(-1)
-const submitted = ref(false)
-const form = reactive({ name: '', company: '', email: '', phone: '', sector: '', message: '' })
 
-const stats = [
-  { value: '10h+', label: 'gagnées par semaine' },
-  { value: '30 jours', label: 'pour voir les résultats' },
-  { value: '24/7', label: 'agents toujours actifs' },
-  { value: '100%', label: 'adapté à vos outils' },
+const pains = [
+  { emoji: '⏱️', title: 'Devis en retard', desc: 'Un prospect demande un devis. Vous répondez 3 jours plus tard. Il est déjà chez le concurrent.' },
+  { emoji: '📭', title: 'Relances oubliées', desc: 'Vos devis envoyés tombent dans l\'oubli. Personne ne relance. L\'argent dort sur la table.' },
+  { emoji: '🔥', title: 'Vous êtes le goulet', desc: 'Tout passe par vous. Emails, plannings, SAV. Vous bossez DANS l\'entreprise au lieu de bosser SUR l\'entreprise.' },
 ]
 
-const services = [
+const solutions = [
   {
-    title: 'Devis & Facturation',
-    desc: 'Génération automatique de devis, envoi au client, relance à J+3. Fini les devis oubliés.',
-    icon: '<svg class="w-6 h-6 text-emerald-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" /></svg>',
-    iconBg: 'bg-emerald-50'
+    icon: '📄', title: 'Agent Devis',
+    desc: 'Un client demande un devis → généré en 2 min → envoyé automatiquement → relancé à J+3 et J+7.',
+    result: '+40% de devis signés'
   },
   {
-    title: 'Support Client',
-    desc: 'Réponses instantanées 24/7, prise de RDV automatique, suivi client personnalisé.',
-    icon: '<svg class="w-6 h-6 text-blue-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" /></svg>',
-    iconBg: 'bg-blue-50'
+    icon: '💬', title: 'Agent Support',
+    desc: 'Vos clients ont une question ? Réponse instantanée 24h/24. Prise de RDV automatique. Zéro attente.',
+    result: 'Support 24/7 sans embauche'
   },
   {
-    title: 'Prospection & Vente',
-    desc: 'Emails personnalisés, qualification de leads, séquences de relance automatisées.',
-    icon: '<svg class="w-6 h-6 text-violet-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" /></svg>',
-    iconBg: 'bg-violet-50'
+    icon: '📈', title: 'Agent Prospection',
+    desc: 'Emails personnalisés envoyés à vos cibles. Qualification automatique. Relances séquencées.',
+    result: '3x plus de leads qualifiés'
   },
   {
-    title: 'Planning & Organisation',
-    desc: 'Gestion des plannings, rappels automatiques, coordination d\'équipe optimisée.',
-    icon: '<svg class="w-6 h-6 text-amber-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" /></svg>',
-    iconBg: 'bg-amber-50'
+    icon: '⚙️', title: 'Agent Sur-Mesure',
+    desc: 'Un process unique à votre métier ? On crée l\'agent qui le gère. Connecté à Gmail, Sheets, CRM, WhatsApp...',
+    result: '10h+ économisées par semaine'
   },
-  {
-    title: 'Reporting & Analyse',
-    desc: 'Tableaux de bord automatiques, KPIs en temps réel, alertes sur vos métriques.',
-    icon: '<svg class="w-6 h-6 text-rose-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>',
-    iconBg: 'bg-rose-50'
-  },
-  {
-    title: 'Workflows Sur-Mesure',
-    desc: 'Process métier unique ? On crée l\'agent qui le gère, connecté à vos outils.',
-    icon: '<svg class="w-6 h-6 text-cyan-600" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" /></svg>',
-    iconBg: 'bg-cyan-50'
-  }
-]
-
-const tools = ['Gmail', 'Google Sheets', 'HubSpot', 'WhatsApp', 'Slack', 'Notion', 'Pipedrive', 'Excel', 'Outlook']
-
-const useCases = [
-  { icon: '🏗️', title: 'BTP & Artisanat', sector: 'Construction, plomberie, électricité...', description: 'Demande client → devis généré en 2 min → envoyé automatiquement → relance à J+3 si pas de réponse.', result: '+40% de devis signés, 5h/semaine gagnées' },
-  { icon: '🏪', title: 'Commerce & Retail', sector: 'Boutiques, e-commerce, franchises...', description: 'Réponses auto aux questions clients, relance panier abandonné, programme fidélité automatisé.', result: '+25% de récurrence client, support 24/7' },
-  { icon: '⚖️', title: 'Professions libérales', sector: 'Avocats, comptables, consultants...', description: 'Prise de RDV intelligente, préparation de dossiers, rappels auto, synthèse de documents.', result: '8h/semaine libérées sur l\'administratif' },
-  { icon: '🏨', title: 'Hôtellerie & Restauration', sector: 'Hôtels, restaurants, traiteurs...', description: 'Gestion des réservations, réponses aux avis Google, commandes fournisseurs auto.', result: '-30% de no-shows, avis traités en 1h' }
 ]
 
 const steps = [
-  { title: 'Appel découverte', desc: 'On identifie vos tâches répétitives et les quick wins. 30 min, gratuit.' },
-  { title: 'Proposition', desc: 'Agent recommandé, ROI estimé, planning clair. Prix fixe, zéro surprise.' },
-  { title: 'Déploiement', desc: 'On construit et connecte l\'agent à vos outils. Vous validez chaque étape.' },
-  { title: 'Résultats', desc: 'L\'agent tourne, vous gagnez du temps. On suit les métriques ensemble.' }
+  { title: 'Audit gratuit (30 min)', desc: 'On analyse votre business ensemble. On identifie les tâches répétitives et les quick wins. On vous montre exactement ce qu\'on peut automatiser et combien ça vous fait gagner.' },
+  { title: 'On construit vos agents', desc: 'On développe les agents IA adaptés à votre métier et vos outils. Vous validez chaque étape. Déploiement en 1 à 4 semaines.' },
+  { title: 'Vous récupérez votre temps', desc: 'Vos agents tournent 24/7. On suit les résultats ensemble et on optimise. Vous vous concentrez sur ce qui fait vraiment croître votre business.' },
 ]
 
-const advantages = [
-  'Sur-mesure : chaque agent est adapté à votre métier',
-  'Local : basé à Poitiers, on se déplace chez vous',
-  'ROI garanti : résultats mesurables sous 30 jours',
-  'Sans engagement : pas de contrat longue durée',
-  'Support inclus : on ajuste et optimise en continu',
+const stats = [
+  { value: '10h+', label: 'gagnées / semaine' },
+  { value: '30j', label: 'pour voir le ROI' },
+  { value: '24/7', label: 'agents actifs' },
+  { value: '0€', label: 'si pas de résultat' },
+]
+
+const useCases = [
+  { icon: '🏗️', title: 'BTP & Artisanat', desc: 'Devis auto, relances, planning chantier. Un artisan signe 40% de devis en plus quand il répond en 2 min au lieu de 3 jours.', result: '+40% de devis signés, 5h/sem récupérées' },
+  { icon: '🏪', title: 'Commerce & Retail', desc: 'Réponses clients automatiques, relance panier, fidélisation. Votre boutique tourne même quand vous dormez.', result: '+25% de clients récurrents' },
+  { icon: '⚖️', title: 'Professions libérales', desc: 'RDV intelligents, préparation de dossiers, rappels auto. Tout l\'administratif qui vous bouffe est géré.', result: '8h/sem libérées sur l\'admin' },
+  { icon: '🏨', title: 'Hôtellerie & Restauration', desc: 'Réservations, avis Google, commandes fournisseurs. Moins de no-shows, plus de clients satisfaits.', result: '-30% de no-shows' },
 ]
 
 const faq = [
-  { q: "Combien ça coûte ?", a: "Chaque projet est sur-mesure. Comptez à partir de 500€ pour un agent simple. L'appel découverte est gratuit et sans engagement." },
-  { q: "C'est quoi un agent IA concrètement ?", a: "Un programme intelligent qui exécute des tâches à votre place : répondre aux emails, générer des devis, qualifier des prospects, relancer des clients... Connecté à vos outils existants." },
-  { q: "Combien de temps pour mettre en place ?", a: "Entre 1 et 4 semaines selon la complexité. Un agent de devis auto peut être opérationnel en 1 semaine." },
-  { q: "Je n'y connais rien en IA, c'est un problème ?", a: "Pas du tout. On gère tout. Vous expliquez votre process, on le transforme en agent. Rien de technique à faire." },
-  { q: "Mes données sont-elles sécurisées ?", a: "Toutes les données sont hébergées en Europe, chiffrées, jamais partagées. 100% conforme RGPD." },
-  { q: "Et si ça ne marche pas ?", a: "On mesure les résultats ensemble dès le premier mois. Si le ROI n'est pas là, on ajuste ou on arrête. Pas d'engagement longue durée." },
-  { q: "Quels outils sont compatibles ?", a: "Gmail, Outlook, Google Sheets, Excel, HubSpot, Pipedrive, WhatsApp, Slack, Notion et bien d'autres." }
+  { q: "C'est quoi un agent IA concrètement ?", a: "C'est un programme intelligent qui exécute des tâches à votre place : envoyer des devis, relancer des clients, répondre aux emails, qualifier des prospects. Il est connecté à vos outils existants (Gmail, Sheets, WhatsApp, CRM...) et tourne 24h/24." },
+  { q: "Combien ça coûte ?", a: "À partir de 500€ pour un agent simple. L'audit est 100% gratuit et sans engagement. On vous dit exactement combien ça coûte et combien ça rapporte avant de démarrer." },
+  { q: "Combien de temps pour avoir des résultats ?", a: "Un agent simple (devis auto, chatbot) peut être opérationnel en 1 semaine. Les projets plus complexes prennent 2 à 4 semaines. Résultats mesurables dès le premier mois." },
+  { q: "Je n'y connais rien en IA.", a: "C'est justement pour ça qu'on est là. Vous nous expliquez comment vous travaillez, on transforme ça en agent. Zéro technique de votre côté." },
+  { q: "Mes données sont-elles sécurisées ?", a: "Tout est hébergé en Europe, chiffré, jamais partagé. 100% conforme RGPD." },
+  { q: "Et si ça marche pas ?", a: "On mesure ensemble. Si le ROI n'est pas là au bout d'un mois, on ajuste ou on arrête. Pas d'engagement longue durée." },
 ]
-
-function submitForm() {
-  submitted.value = true
-  setTimeout(() => { submitted.value = false }, 3000)
-}
 </script>

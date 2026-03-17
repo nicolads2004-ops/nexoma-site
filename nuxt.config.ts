@@ -4,17 +4,17 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss'],
   app: {
     head: {
-      title: 'Nexoma | Agents IA pour PME - Poitiers & Vienne (86)',
+      title: 'Nexoma | Votre équipe IA sur-mesure — Poitiers & Vienne (86)',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        {
-          name: 'description',
-          content: 'Nexoma automatise votre entreprise avec des agents IA sur-mesure. Devis, relance client, prospection, support — résultats en 30 jours. PME de Poitiers et du 86.'
-        }
+        { name: 'description', content: 'Nexoma installe des agents IA dans votre entreprise. Devis, relances, prospection, support — automatisés. Audit gratuit. PME de Poitiers et du 86.' }
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }
+      ],
+      script: [
+        { src: 'https://assets.calendly.com/assets/external/widget.js', async: true }
       ]
     }
   }
